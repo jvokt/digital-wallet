@@ -42,6 +42,7 @@ public class Antifraud {
 					graph.addEdge(tokens[1], tokens[2]);
 			}
 			br.close();
+			System.out.println("Processing neighbors");
 			graph.processNeighbors();
 			br = new BufferedReader(new FileReader(input_stream));
 			bw1 = new BufferedWriter(new FileWriter(output1));
