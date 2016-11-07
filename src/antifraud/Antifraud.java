@@ -42,8 +42,6 @@ public class Antifraud {
 					graph.addEdge(tokens[1], tokens[2]);
 			}
 			br.close();
-			System.out.println("Processing neighbors");
-			graph.processNeighbors();
 			br = new BufferedReader(new FileReader(input_stream));
 			bw1 = new BufferedWriter(new FileWriter(output1));
 			bw2 = new BufferedWriter(new FileWriter(output2));
@@ -60,7 +58,6 @@ public class Antifraud {
 					bw3.write(graph.getFeature3Output(tokens[1], tokens[2]));
 					bw3.newLine();
 					graph.addEdge(tokens[1], tokens[2]);
-					graph.updateNeighbors(tokens[1], tokens[2]);
 				}
 			}
 			br.close();
